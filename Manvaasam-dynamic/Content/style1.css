@@ -1,0 +1,124 @@
+﻿* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    list-style-type: none;
+    text-decoration: none;
+}
+
+.sidebar {
+    box-shadow: 2px 2px 5px rgba(0,0,0,0.2);
+    position: fixed;
+    height: 100%;
+    left: 0;
+    top: 60px;
+    width:240px;
+    transition: 300ms;
+    z-index: 0;
+    box-sizing: border-box;
+}
+.sidebar-menu {
+    margin-top: 3rem;
+}
+.sidebar-menu li {
+        width: 100%;
+        align-items: center;
+        margin-bottom: 1.1rem;
+        padding-left: 1rem;
+}
+.sidebar-menu a {
+     display: block;
+     font-size: 1.6rem;
+     font-weight: 600;
+     color: firebrick;
+}
+#nav-toggle:checked + .sidebar .sidebar-brand h1 span:last-child,
+#nav-toggle:checked + .sidebar li a span:last-child {
+    display: none;
+}
+#nav-toggle:checked + .sidebar {
+    width: 70px;
+}
+ #nav-toggle:checked + .sidebar .sidebar-brand,
+ #nav-toggle:checked + .sidebar li {
+        padding-left: 1rem;
+        text-align: center;
+ }
+ #nav-toggle:checked + .sidebar li a {
+            padding-left: 0rem;
+ }
+.main-content {
+    height: 100%;
+    transition: margin-left 300ms;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem 1.5rem;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    height: 60px;
+    background: #fff;
+    z-index: 100;
+    box-shadow: 2px 2px 5px rgba(0,0,0,0.2);
+}
+
+.sidebar-menu a span:first-child {
+    font-size: 2.1rem;
+    padding-top: 0.8rem;
+    padding-bottom: 0.8rem;
+}
+
+.link_name {
+    margin-left: 1rem;
+}
+
+#nav-toggle {
+    display: none;
+}
+
+header h2 {
+    color: #222;
+}
+header label span {
+    font-size: 1.7rem;
+    padding-right: 1rem;
+}
+.whatsapp {
+    float: right;
+    margin-top: -28px;
+    font-size:12px;
+}
+.joinus {
+    float: right;
+    margin-top: 8px;
+    margin-right: 135px;
+    font-size: 12px;
+}
+header h1 span {
+    font-size: 28px;
+}
+#question{
+    display:none;
+}
+@media only screen and (max-width: 700px) {
+    #question {
+        margin-top: 10px;
+        display: flex;
+    }
+    #menu {
+        position: absolute;
+        top: 58px;
+        right: 1px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .menu_items {
+        margin: 2px;
+    }
+}
